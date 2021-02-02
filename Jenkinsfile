@@ -3,7 +3,7 @@ pipeline {
     environment {
         //be sure to replace "felipelujan" with your own Docker Hub username
         //changesss
-        DOCKER_IMAGE_NAME = "felipelujan/gradle-test"
+        DOCKER_IMAGE_NAME = "nanbrockway/gradle-test"
     }
     stages {
          stage('Build') {	
