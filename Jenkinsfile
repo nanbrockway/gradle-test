@@ -18,9 +18,8 @@ pipeline {
             }
             steps {
                 script {
-                    // app = docker.build(DOCKER_IMAGE_NAME)
                     echo 'Running build docker image'	
-                    sh 'docker build nanbrockway/gradle-test'	
+                    app = docker.build(DOCKER_IMAGE_NAME)
                 }
             }
         }
@@ -30,6 +29,7 @@ pipeline {
             }
             steps {
                 script {
+                    echo 'Running push docker image'
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_login') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
@@ -42,6 +42,7 @@ pipeline {
                 branch 'master'
             }
             steps {
+                echo 'deploy kub'	
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
