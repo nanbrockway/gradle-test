@@ -66,8 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-
-
-### this is a comment to test pipeline
-### this is a comment to test pipeline for second time
-### this is a comment to test pipeline for third time
