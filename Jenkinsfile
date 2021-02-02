@@ -18,7 +18,9 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build(DOCKER_IMAGE_NAME)
+                    // app = docker.build(DOCKER_IMAGE_NAME)
+                    echo 'Running build docker image'	
+                    sh 'docker build nanbrockway/gradle-test'	
                 }
             }
         }
