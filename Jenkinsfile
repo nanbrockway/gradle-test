@@ -42,7 +42,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                echo 'deploy kub'	
+                echo 'deploy kubernetes'	
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
